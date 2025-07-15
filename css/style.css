@@ -1,0 +1,282 @@
+/* Custom Variables */
+:root {
+  --primary-color: #1a2980;
+  --secondary-color: #26d0ce;
+  --accent-color: #17a2b8;
+}
+
+/* General Styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Comic Neue", cursive;
+  line-height: 1.6;
+  color: white;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Background and Layout */
+html,
+body {
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#vanta-bg {
+  position: relative;
+  min-height: 100%;
+  background: linear-gradient(
+    45deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+}
+
+.vanta-canvas {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+/* Text Styles */
+.section-heading {
+  color: white;
+  font-weight: 700;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.text-muted {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  color: white;
+}
+
+/* Hero Section */
+.hero-section {
+  height: 100vh;
+  min-height: 500px;
+  padding-top: 80px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Navigation */
+.navbar {
+  font-family: "Comic Neue", cursive;
+  font-weight: 700;
+  background-color: rgba(0, 0, 0, 0.3) !important;
+  backdrop-filter: blur(10px);
+}
+
+.navbar-brand {
+  font-size: 1.8rem;
+}
+
+/* Skills Section */
+.skills-container {
+  margin-top: 2rem;
+}
+
+.skill-badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.skill-badges .badge {
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+}
+
+.skill-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.skill-icon:hover {
+  transform: translateY(-5px);
+}
+
+.skill-icon i {
+  font-size: 3rem;
+}
+
+.skill-icon span {
+  font-size: 1rem;
+  color: white;
+  font-weight: 700;
+}
+
+/* Projects Section */
+#projects {
+  background: transparent !important;
+}
+
+#projects .section-heading {
+  color: white;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: white;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.project-card .card-title {
+  color: white;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.project-card .card-text {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.project-tech span {
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  font-size: 0.9rem;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.project-links a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.project-links a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Contact Section */
+.social-links a {
+  color: white;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: var(--secondary-color);
+  transform: scale(1.1);
+}
+
+/* Divider */
+.divider {
+  max-width: 3.25rem;
+  border-width: 0.2rem;
+  border-color: var(--secondary-color);
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+  background: rgba(0, 0, 0, 0.3) !important;
+  backdrop-filter: blur(10px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s ease forwards;
+}
+
+/* Ensure content stays above background */
+main,
+section,
+footer {
+  position: relative;
+  z-index: 1;
+}
+
+section {
+  position: relative;
+  z-index: 1;
+  background: transparent !important;
+}
+
+#projects,
+#contact {
+  position: relative;
+  z-index: 1;
+  background: transparent !important;
+}

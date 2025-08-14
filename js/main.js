@@ -1,32 +1,49 @@
 // Initialize VANTA.js background
-VANTA.WAVES({
-  el: "#vanta-bg",
-  mouseControls: true,
-  touchControls: true,
-  gyroControls: false,
-  minHeight: document.documentElement.scrollHeight,
-  minWidth: window.innerWidth,
-  scale: 1.0,
-  scaleMobile: 1.0,
-  color: 0x1a2980,
-  shininess: 27.0,
-  waveHeight: 20.0,
-  waveSpeed: 0.75,
-  zoom: 0.9,
-  amplitude: 1.0,
-  coverage: 1.2,
-});
+// VANTA.WAVES({
+//   el: "#vanta-bg",
+//   mouseControls: true,
+//   touchControls: true,
+//   gyroControls: false,
+//   minHeight: document.documentElement.scrollHeight,
+//   minWidth: window.innerWidth,
+//   scale: 1.0,
+//   scaleMobile: 1.0,
+//   color: 0x1a2980,
+//   shininess: 27.0,
+//   waveHeight: 20.0,
+//   waveSpeed: 0.75,
+//   zoom: 0.9,
+//   amplitude: 1.0,
+//   coverage: 1.2,
+// });
 
 // Update VANTA height on window resize and content changes
-window.addEventListener("resize", () => {
-  if (window.VANTA) {
-    window.VANTA.resize();
-    window.VANTA.options.minHeight = document.documentElement.scrollHeight;
-  }
-});
+// window.addEventListener("resize", () => {
+//   if (window.VANTA) {
+//     window.VANTA.resize();
+//     window.VANTA.options.minHeight = document.documentElement.scrollHeight;
+//   }
+// });
 
 // Project data
 const projects = [
+  {
+    title: "Team Management",
+    description:
+      "A full-stack project management web app built with Laravel 12 and Vue 3 for organizing teams and assigning tasks. Supports creating teams, managing deadlines, and tracking progress with subtasks and points-based competition. Features real-time notifications using Pusher and interactive scheduling with FullCalendar.",
+    image: "images/team.png",
+    technologies: [
+      "Laravel",
+      "Vue js",
+      "MySQL",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Tailwind",
+    ],
+    liveLink: "https://www.linkedin.com/posts/moataz-ahmed-b18a49276_laravel-vuejs-fullstackdevelopment-activity-7361001541446549505-SOXa?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAENuHwQBIqpFEZsQzKHw5ezQX-yVDQXgg64",
+       githubLink: "https://github.com/Moataz6333/Team-Link",
+  },
   {
     title: "E-commerce Platform",
     description:
